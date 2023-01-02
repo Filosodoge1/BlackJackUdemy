@@ -14,6 +14,20 @@ underscore.org
 let deck = [];
 const tipo = ['C','D','H','S'];
 const tipoA = ['A','J','K','Q'];
+let jugador = [];
+let computadora = [];
+
+const pedirCarta = (cualquierJ) => {
+    //metodo shift: remueve el primer elemento del array
+    
+    if (deck.length === 0) {
+        throw 'No hay cartas en el deck';
+    }
+
+    let carta = deck.shift();
+    cualquierJ.push(carta);
+    return cualquierJ;
+}
 
 const construirDeck = () => {
 
@@ -32,10 +46,19 @@ const construirDeck = () => {
         }
     }
     
-    return deckC;
+    return _.shuffle(deckC);
+    // return deckC;
 }
 
 deck = construirDeck();
-
 console.log(deck);
 
+pedirCarta(jugador);
+console.log('Jugador: ', jugador);
+console.log('Deck: ', deck);
+pedirCarta(jugador);
+console.log('Jugador: ', jugador);
+console.log('Deck: ', deck);
+pedirCarta(computadora);
+console.log('Computadora: ', computadora);
+console.log('Jugador: ', jugador);
