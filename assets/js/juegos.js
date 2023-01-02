@@ -17,6 +17,19 @@ const tipoA = ['A','J','K','Q'];
 let jugador = [];
 let computadora = [];
 
+const valorCarta = (carta) => {
+    let puntos = 0;
+    for (const cartas of carta) {
+        const valor = cartas.substring(0, cartas.length-1);
+        
+        isNaN(valor) ? (puntos = (valor === 'A') 
+                     ?  puntos = puntos + 11 : 
+                        puntos = puntos + 10 ) : (puntos = puntos + (valor * 1));     
+    }
+    return puntos;
+    // puntos = puntos + valor;
+}
+
 const pedirCarta = (cualquierJ) => {
     //metodo shift: remueve el primer elemento del array
     
@@ -62,3 +75,5 @@ console.log('Deck: ', deck);
 pedirCarta(computadora);
 console.log('Computadora: ', computadora);
 console.log('Jugador: ', jugador);
+
+console.log('Resultado del jugador: ', valorCarta(jugador));
