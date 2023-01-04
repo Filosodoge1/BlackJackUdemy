@@ -77,3 +77,15 @@ console.log('Computadora: ', computadora);
 console.log('Jugador: ', jugador);
 
 console.log('Resultado del jugador: ', valorCarta(jugador));
+
+// const divBotones = document.querySelector('#divBotones');
+// const botonNuevo = document.createElement('button');
+// divBotones.append(botonNuevo);
+// botonNuevo.innerText = 'Nuevo Boton';
+// botonNuevo.classList.add('btn');
+// botonNuevo.classList.add('btn-success');
+// const input = document.createElement('input');
+// document.body.append(input);
+// input.classList.add('form-control');
+// input.placeholder('hola mundo');
+// input.placeholder = 'hola mundo';
